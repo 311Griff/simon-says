@@ -1,0 +1,155 @@
+//a work in progress...
+//colors
+$blue: #779ECB;
+$yellow: #FDFD96;
+$red: #FF6961;
+$green: #00FA9A;
+body {
+  background: #f2f2f2;
+  li:focus,
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+  * {
+    font-family: 'Oswald', sans-serif;
+  }
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+  padding-top: 50px;
+  h1 {
+    font-size: 40px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    color: #666;
+  }
+}
+
+.command-count {
+  color: white;
+  text-align: center;
+  span {
+    display: inline;
+    padding-left: 5px;
+  }
+  p {
+    display: inline;
+  }
+}
+
+.buttons {
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+  padding: 30px;
+  background: #666;
+  border-radius: 20px;
+  width: 60%;
+  button {
+    cursor: pointer;
+    margin-bottom: 30px;
+    float: left;
+    width: 45%;
+  }
+  #start-button {
+    background-color: rgba(0,102,0,.7);
+    border: 1px solid black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    @media screen and (min-width: 1024px) {
+      margin-left: 25px;
+    }
+  }
+  #quit {
+    background-color: rgba(102,0,0,.7);
+    border: 1px solid black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-left: 5px;
+  }
+}
+
+.audio-sounds {
+  display: none;
+}
+
+.board {
+  background: #2f4f4f;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    li {
+      width: 22%;
+      display: inline-block;
+      height: 100px;
+      border-radius: 5px;
+      border: 1px solid #f2f2f2;
+      cursor: pointer;
+      &.blue {
+        background-color: $blue;
+        opacity: .4;
+        &.brighter {
+          opacity: 1;
+        }
+      }
+      &.yellow {
+        background-color: $yellow;
+        opacity: .4;
+        &.brighter {
+          opacity: 1;
+        }
+      }
+      &.red {
+        background-color: $red;
+        opacity: .4;
+        &.brighter {
+          opacity: 1;
+        }
+      }
+      &.green {
+        background-color: $green;
+        opacity: .4;
+        &.brighter {
+          opacity: 1;
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        display: inline-block;
+        width: 22%;
+        height: 175px;
+        margin-bottom: 0;
+        border-radius: 50%
+      }
+      &:focus {
+        outline: none;
+      }    
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    height: 200px;
+  }
+}
+
+#message {
+  display: none;
+  color: #545454;
+  font-size: 30px;
+  position: absolute;
+  &.appear {
+    display: inline;
+  }
+}
